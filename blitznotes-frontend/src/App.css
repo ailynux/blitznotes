@@ -1,0 +1,104 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a2e;
+  color: #eaeaea;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f1f1f1;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e55c50;
+}
+
+/* Layout */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a2e;
+}
+
+header {
+  background-color: #1f1f2e;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #f1f1f1;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  font-size: 0.875rem;
+}
+
+/* Form Styles */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  background-color: #2e2e3a;
+  color: #eaeaea;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #aaa;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
