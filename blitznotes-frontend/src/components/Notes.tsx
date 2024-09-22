@@ -1,17 +1,20 @@
 //Notes.tsx
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Added useNavigate for logout
 import axios from 'axios';
 import { Note } from '../types';
+import '../styles/Notes.css'; // Import the custom CSS for the Notes page
 
 interface NotesProps {
   token: string;
+  setToken: (token: string) => void;
 }
 
-const Notes: React.FC<NotesProps> = ({ token }) => {
+const Notes: React.FC<NotesProps> = ({ token, setToken }) => {
   const [notes, setNotes] = useState<Note[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNotes = async () => {
@@ -31,21 +34,53 @@ const Notes: React.FC<NotesProps> = ({ token }) => {
     fetchNotes();
   }, [token]);
 
+  const handleDelete = async (noteId: number) => {
+    try {
+      await axios.delete(`http://localhost:5140/api/notes/${noteId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+      setNotes(notes.filter(note => note.id !== noteId));
+    } catch (error) {
+      setError('Error deleting note');
+      console.error('Error deleting note', error);
+    }
+  };
+
+  const handleLogout = () => {
+    setToken(''); // Clear token on logout
+    navigate('/login'); // Redirect to login page
+  };
+
   return (
-    <div>
-      <h2>Your Notes</h2>
-      {error && <p>{error}</p>}
-      <Link to="/create-note">
-        <button>Create New Note</button> {/* Link to create note */}
-      </Link>
-      <ul>
-        {notes.map((note) => (
-          <li key={note.id}>
-            <h3>{note.title}</h3>
-            <p>{note.content}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="notes-container">
+      <div className="notes-header">
+        <h2 className="notes-title">Your Notes</h2>
+        {error && <p className="error-message">{error}</p>}
+        <div className="notes-actions">
+          <Link to="/create-note">
+            <button className="btn create-btn">Create New Note</button>
+          </Link>
+          <button onClick={handleLogout} className="btn logout-btn">
+            Logout
+          </button>
+        </div>
+      </div>
+      <div className="notes-list-wrapper">
+        <ul className="notes-list">
+          {notes.map((note) => (
+            <li key={note.id} className="note-card">
+              <h3>{note.title}</h3>
+              <p>{note.content}</p>
+              <button onClick={() => handleDelete(note.id)} className="btn delete-btn">
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

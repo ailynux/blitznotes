@@ -1,0 +1,83 @@
+/* styles/CreateNote.css */
+/* CreateNote.css */
+/* CreateNote.css */
+.create-note-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px; /* Slightly wider */
+    background-color: #1e1e1e; /* Matching dark theme */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.create-note-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #61dafb; /* Matching the note title color */
+}
+
+.create-note-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.create-note-input,
+.create-note-textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: #282c34; /* Dark background for input */
+    border-radius: 6px;
+    color: #f1f1f1; /* Lighter text */
+    font-size: 1.1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.create-note-textarea {
+    height: 150px;
+    resize: none;
+}
+
+.create-note-button {
+    padding: 12px;
+    background-color: #5a5aed; /* Matching the primary button color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.create-note-button:hover {
+    background-color: #4848c9; /* Slightly darker hover color */
+}
+
+.create-note-error {
+    color: #ff5e5e;
+    margin-top: 1rem;
+}
+
+/* Back button */
+.create-note-back-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #444; /* Dark button background */
+    color: #f1f1f1; /* Light button text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.create-note-back-button:hover {
+    background-color: #666; /* Lighter on hover */
+}

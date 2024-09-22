@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation and useNavigate for redirects
 import axios from 'axios';
 
 interface LoginProps {
@@ -23,9 +23,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
         username,
         password,
       });
-  
-      console.log(response.data); // Check the response structure
-  
+
       setToken(response.data.token); // Set token after successful login
       setError('');
       navigate('/notes'); // Redirect to the Notes page
@@ -34,26 +32,35 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
       setError('Login failed. Please check your credentials and try again.');
     }
   };
-  
+
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
       <h2>Login</h2>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', width: '300px' }}>
         <input 
           type="text" 
           placeholder="Username" 
           value={username} 
           onChange={(e) => setUsername(e.target.value)} 
+          style={{ marginBottom: '10px', padding: '8px', fontSize: '16px' }}
         />
         <input 
           type="password" 
           placeholder="Password" 
           value={password} 
           onChange={(e) => setPassword(e.target.value)} 
+          style={{ marginBottom: '10px', padding: '8px', fontSize: '16px' }}
         />
-        <button type="submit">Login</button>
-        {error && <p>{error}</p>}
+        <button type="submit" style={{ padding: '10px', fontSize: '16px', backgroundColor: '#61dafb', border: 'none', cursor: 'pointer' }}>
+          Login
+        </button>
+        {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
       </form>
+      
+      {/* Add link to Register page */}
+      <p style={{ marginTop: '20px' }}>
+        Don't have an account? <Link to="/register">Register here</Link>
+      </p>
     </div>
   );
 };

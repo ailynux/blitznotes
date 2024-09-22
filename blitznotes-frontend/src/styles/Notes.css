@@ -1,0 +1,95 @@
+/* Notes.css */
+/* Notes.css */
+/* Notes.css */
+.notes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .notes-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .notes-actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #444;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #666;
+  }
+  
+  .create-btn {
+    background-color: #007bff;
+  }
+  
+  .logout-btn {
+    background-color: #dc3545;
+  }
+  
+  .notes-list-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .notes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .note-card {
+    background-color: #282c34;
+    width: 30%;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    text-align: left;
+    min-width: 250px;
+  }
+  
+  .note-card h3 {
+    margin-top: 0;
+    color: #61dafb;
+  }
+  
+  .note-card p {
+    margin: 10px 0;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+  
+  .error-message {
+    color: #ff6666;
+  }
+  
