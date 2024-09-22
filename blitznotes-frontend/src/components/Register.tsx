@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Add Link and useNavigate for better navigation
 import axios from 'axios';
+import '../styles/Register.css'; // Importing the CSS file
 
 const Register: React.FC = () => {
   const [username, setUsername] = useState<string>('');
@@ -27,34 +28,40 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <h2>Register</h2>
-      <form onSubmit={handleRegister} style={{ display: 'flex', flexDirection: 'column', width: '300px' }}>
+    <div className="register-container">
+      <h2 className="register-title">Register</h2>
+      <form onSubmit={handleRegister} className="register-form">
         <input 
           type="text" 
           placeholder="Username" 
           value={username} 
           onChange={(e) => setUsername(e.target.value)} 
-          style={{ marginBottom: '10px', padding: '8px', fontSize: '16px' }}
+          className="register-input"
         />
         <input 
           type="password" 
           placeholder="Password" 
           value={password} 
           onChange={(e) => setPassword(e.target.value)} 
-          style={{ marginBottom: '10px', padding: '8px', fontSize: '16px' }}
+          className="register-input"
         />
-        <button type="submit" style={{ padding: '10px', fontSize: '16px', backgroundColor: '#61dafb', border: 'none', cursor: 'pointer' }}>
+        <button type="submit" className="register-button">
           Register
         </button>
-        {message && <p style={{ color: 'green', marginTop: '10px' }}>{message}</p>}
-        {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
+        {message && <p className="register-success">{message}</p>}
+        {error && <p className="register-error">{error}</p>}
       </form>
       
       {/* Link back to login */}
-      <p style={{ marginTop: '20px' }}>
-        Already have an account? <Link to="/login">Login here</Link>
+      <p className="login-link">
+        Already have an account? <Link to="/login" className="login-link-text">Login here</Link>
       </p>
+
+      {/* Social Badges */}
+      <div className="social-badges">
+        <a href="https://www.linkedin.com/in/ailyndiaz01" className="badge linkedin-badge">LinkedIn</a>
+        <a href="https://github.com/ailynux" className="badge github-badge">GitHub</a>
+      </div>
     </div>
   );
 };

@@ -1,95 +1,178 @@
 /* Notes.css */
-/* Notes.css */
-/* Notes.css */
+/* General Container */
 .notes-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    background-color: #1e1e1e;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #1a1a1d, #2c2c34);
     color: #f1f1f1;
-    border-radius: 10px;
-  }
-  
-  .notes-header {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.notes-container:hover {
+    background-color: #232325;
+}
+
+/* Header */
+.notes-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .notes-title {
-    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.notes-title {
+    font-size: 2.5rem;
     margin: 0;
-  }
-  
-  .notes-actions {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #61dafb;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Actions (Create/Logout buttons) */
+.notes-actions {
     display: flex;
-    gap: 15px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    margin: 0 5px;
-    background-color: #444;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #333, #444);
     color: #f1f1f1;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #666;
-  }
-  
-  .create-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #555;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.create-btn {
     background-color: #007bff;
-  }
-  
-  .logout-btn {
+    color: #fff;
+}
+
+.create-btn:hover {
+    background-color: #0056b3;
+}
+
+.logout-btn {
     background-color: #dc3545;
-  }
-  
-  .notes-list-wrapper {
+    color: #fff;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Notes List Wrapper */
+.notes-list-wrapper {
     display: flex;
     justify-content: center;
-  }
-  
-  .notes-list {
+    padding-top: 20px;
+}
+
+.notes-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
+    gap: 30px;
+    justify-content: center;
     padding: 0;
-  }
-  
-  .note-card {
+    list-style: none;
+}
+
+/* Note Card */
+.note-card {
     background-color: #282c34;
-    width: 30%;
+    width: calc(33% - 20px);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #444;
     text-align: left;
-    min-width: 250px;
-  }
-  
-  .note-card h3 {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 260px;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.note-card h3 {
     margin-top: 0;
+    font-size: 1.8rem;
     color: #61dafb;
-  }
-  
-  .note-card p {
-    margin: 10px 0;
-  }
-  
-  .delete-btn {
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.note-card p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    line-height: 1.5;
+}
+
+/* Delete Button */
+.delete-btn {
     background-color: #dc3545;
-    padding: 5px 15px;
-    border-radius: 5px;
-  }
-  
-  .error-message {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Error Message */
+.error-message {
     color: #ff6666;
-  }
-  
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+/* Add media queries to handle responsiveness */
+@media (max-width: 768px) {
+    .notes-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .note-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .notes-title {
+        font-size: 2rem;
+    }
+
+    .notes-actions {
+        flex-direction: column;
+    }
+
+    .note-card {
+        width: 100%;
+    }
+}

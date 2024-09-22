@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation and useNavigate for redirects
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import '../styles/Login.css'; // Importing the custom CSS file
 
 interface LoginProps {
   setToken: (token: string) => void;
 }
 
 interface LoginResponse {
-  token: string; // Adjust this if your API returns a different structure
+  token: string; 
 }
 
 const Login: React.FC<LoginProps> = ({ setToken }) => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,43 +25,53 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
         password,
       });
 
-      setToken(response.data.token); // Set token after successful login
+      setToken(response.data.token);
       setError('');
-      navigate('/notes'); // Redirect to the Notes page
+      navigate('/notes');
     } catch (err) {
-      console.error(err); // Log the error for more insight
+      console.error(err);
       setError('Login failed. Please check your credentials and try again.');
     }
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', width: '300px' }}>
-        <input 
-          type="text" 
-          placeholder="Username" 
-          value={username} 
-          onChange={(e) => setUsername(e.target.value)} 
-          style={{ marginBottom: '10px', padding: '8px', fontSize: '16px' }}
+    <div className="login-container">
+      <h1 className="login-title">BlitzNotes</h1> {/* BlitzNotes title */}
+      <form onSubmit={handleLogin} className="login-form">
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="login-input"
         />
-        <input 
-          type="password" 
-          placeholder="Password" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
-          style={{ marginBottom: '10px', padding: '8px', fontSize: '16px' }}
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="login-input"
         />
-        <button type="submit" style={{ padding: '10px', fontSize: '16px', backgroundColor: '#61dafb', border: 'none', cursor: 'pointer' }}>
+        <button type="submit" className="login-button">
           Login
         </button>
-        {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
+        {error && <p className="login-error">{error}</p>}
       </form>
-      
+
       {/* Add link to Register page */}
-      <p style={{ marginTop: '20px' }}>
-        Don't have an account? <Link to="/register">Register here</Link>
+      <p className="register-link">
+        Don't have an account? <Link to="/register" className="register-link-text">Register here</Link>
       </p>
+
+      {/* Social Badges */}
+      <div className="social-badges">
+        <a href="https://www.linkedin.com/in/ailyndiaz01" className="badge linkedin-badge" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a href="https://github.com/ailynux" className="badge github-badge" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
     </div>
   );
 };
