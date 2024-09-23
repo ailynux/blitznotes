@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlitzNotesAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec3f662376825ab450439af51d279442928ec38d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8c94db7b6db5bcdf7f148518fef9bbd04d56143")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlitzNotesAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlitzNotesAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
