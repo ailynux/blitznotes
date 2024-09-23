@@ -23,7 +23,6 @@
 - **Add, Edit, Delete Notes**: Easily manage your notes with CRUD functionality.
 - **Categorization**: Organize your notes into categories for better management.
 - **Responsive Design**: Works seamlessly across devices, whether you're on mobile or desktop.
-- **Search & Filter**: Quickly find your notes using the advanced search and filter system.
 - **Dark Mode**: Enjoy a sleek, dark-themed interface to reduce eye strain.
 
 ### 🌟 Why BlitzNotes?
