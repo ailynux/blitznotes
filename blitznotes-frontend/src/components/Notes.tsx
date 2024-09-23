@@ -57,7 +57,7 @@ const Notes: React.FC<NotesProps> = ({ token, setToken }) => {
   return (
     <div className="notes-container">
       <div className="notes-header">
-        <h2 className="notes-title">Your Notes</h2>
+        <h2 className="notes-title">Notes</h2>
         {error && <p className="error-message">{error}</p>}
         <div className="notes-actions">
           <Link to="/create-note">

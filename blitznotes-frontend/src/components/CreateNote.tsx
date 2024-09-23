@@ -50,7 +50,7 @@ const CreateNote: React.FC<CreateNoteProps> = ({ token }) => {
 
   return (
     <div className="create-note-container">
-      <h2 className="create-note-title">Create a New Note</h2>
+      <h2 className="create-note-title">New Notes</h2>
       <form onSubmit={handleCreateNote} className="create-note-form">
         <input
           type="text"
