@@ -10673,24 +10673,27 @@
     ]
   },
   "packageFolders": {
-    "/Users/ailyndiaz/.nuget/packages/": {}
+    "C:\\Users\\Yamz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ailyndiaz/Desktop/todoapp_cs/blitznotes/BlitzNotesAPI/BlitzNotesAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\blitznotesapi\\BlitzNotesAPI.csproj",
       "projectName": "BlitzNotesAPI",
-      "projectPath": "/Users/ailyndiaz/Desktop/todoapp_cs/blitznotes/BlitzNotesAPI/BlitzNotesAPI.csproj",
-      "packagesPath": "/Users/ailyndiaz/.nuget/packages/",
-      "outputPath": "/Users/ailyndiaz/Desktop/todoapp_cs/blitznotes/BlitzNotesAPI/obj/",
+      "projectPath": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\blitznotesapi\\BlitzNotesAPI.csproj",
+      "packagesPath": "C:\\Users\\Yamz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\blitznotesapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/ailyndiaz/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Yamz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10778,7 +10781,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
