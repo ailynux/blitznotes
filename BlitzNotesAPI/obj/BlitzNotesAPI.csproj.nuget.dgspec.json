@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\blitznotesapi\\BlitzNotesAPI.csproj": {}
+    "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\BlitzNotesAPI\\BlitzNotesAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\blitznotesapi\\BlitzNotesAPI.csproj": {
+    "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\BlitzNotesAPI\\BlitzNotesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\blitznotesapi\\BlitzNotesAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\BlitzNotesAPI\\BlitzNotesAPI.csproj",
         "projectName": "BlitzNotesAPI",
-        "projectPath": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\blitznotesapi\\BlitzNotesAPI.csproj",
+        "projectPath": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\BlitzNotesAPI\\BlitzNotesAPI.csproj",
         "packagesPath": "C:\\Users\\Yamz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\blitznotesapi\\obj\\",
+        "outputPath": "C:\\Users\\Yamz\\Desktop\\notesappcs\\blitznotes\\BlitzNotesAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yamz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.8, )"

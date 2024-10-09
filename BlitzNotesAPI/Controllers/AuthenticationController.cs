@@ -19,28 +19,48 @@ public class AuthenticationController : ControllerBase
         _configuration = configuration;
     }
 
-    [HttpPost("register")]
+   [HttpPost("register")]
     public async Task<ActionResult<User>> Register(User user)
     {
-        // Hash password and save user to the database
-        _context.Users.Add(user);
-        await _context.SaveChangesAsync();
-        return Ok("User registered successfully");
+        try
+        {
+            // Validate the input
+            if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
+            {
+                return BadRequest("Username and Password are required.");
+            }
+
+            // Hash the password before saving
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+
+            // Save user to the database
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            return Ok("User registered successfully");
+        }
+        catch (Exception ex)
+        {
+            // Log the error
+            Console.WriteLine(ex.Message);
+            return StatusCode(500, "An error occurred while registering the user.");
+        }
     }
+
+
 
     [HttpPost("login")]
-    public ActionResult Login(User loginDetails)
+public ActionResult Login(User loginDetails)
+{
+    var user = _context.Users.SingleOrDefault(u => u.Username == loginDetails.Username);
+    if (user == null || !BCrypt.Net.BCrypt.Verify(loginDetails.Password, user.Password))
     {
-        var user = _context.Users.SingleOrDefault(u => u.Username == loginDetails.Username);
-        if (user == null || user.Password != loginDetails.Password)
-        {
-            return Unauthorized("Invalid credentials");
-        }
-
-        // Generate JWT token
-        var token = GenerateJwtToken(user);
-        return Ok(new { token });
+        return Unauthorized("Invalid credentials");
     }
+
+    // Generate JWT token
+    var token = GenerateJwtToken(user);
+    return Ok(new { token });
+}
 
     private string GenerateJwtToken(User user)
     {

@@ -44,6 +44,7 @@ const Register: React.FC = () => {
           value={password} 
           onChange={(e) => setPassword(e.target.value)} 
           className="register-input"
+          autoComplete="new-password" // Fix: changed autocomplete to autoComplete
         />
         <button type="submit" className="register-button">
           Register

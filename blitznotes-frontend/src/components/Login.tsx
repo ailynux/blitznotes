@@ -51,6 +51,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="login-input"
+          autoComplete="current-password" // Fix: changed autocomplete to autoComplete
         />
         <button type="submit" className="login-button">
           Login
