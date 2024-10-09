@@ -1,6 +1,7 @@
-# 📝 BlitzNotes
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Black%20Nib.png" alt="Black Nib" width="75" height="75" /> BlitzNotes
 
-![BlitzNotes Logo](https://via.placeholder.com/200x80.png?text=BlitzNotes+Logo)  
+<img src="https://github.com/user-attachments/assets/bedf06b1-20c9-4831-bec5-5e8584831a9a" width="300" height="300">
+
 *A modern, intuitive, and stylish notes app.*
 
 ---
@@ -13,11 +14,14 @@
 
 ---
 
-## 🚀 Project Overview
+## Project Overview <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Magnifying%20Glass%20Tilted%20Left.png" alt="Magnifying Glass Tilted Left" width="65" height="65" />
 
-**BlitzNotes** is a sleek, user-friendly notes app designed to streamline the process of capturing, editing, and organizing personal notes. Built with cutting-edge technologies, BlitzNotes provides a responsive and interactive experience with features tailored to enhance productivity.
+*BlitzNotes* is a sleek, user-friendly notes app designed to streamline the process of capturing, editing, and organizing personal notes. Built with C#, React, and Azure technologies, BlitzNotes provides a responsive and interactive experience with features tailored for users wanting to do some note taking this app includes React Hooks, Dependency Injections & more. 
 
-![BlitzNotes Screenshot](https://via.placeholder.com/1000x400.png?text=App+Screenshot+Here)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/82aefc9f-b91d-41c2-871f-88d189a66d1e" alt="blitznote_login" width="800px">
+</div>
+
 
 ### 🛠️ Key Features:
 - **Add, Edit, Delete Notes**: Easily manage your notes with CRUD functionality.
@@ -36,17 +40,19 @@ BlitzNotes was built to be both functional and lightweight, utilizing modern des
 ## 🖼️ Screenshots
 
 ### Dashboard:
-![BlitzNotes Dashboard](https://via.placeholder.com/1000x400.png?text=Dashboard+Screenshot)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/dcc5f7d6-f851-4141-a08d-342bf3fc6d41" alt="blitznote_notes" width="500px">
+</div>
 
 ### Adding Notes:
-![Adding Notes](https://via.placeholder.com/1000x400.png?text=Adding+Notes+Screenshot)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ea5f538e-427d-4a0f-92f5-ae54f8ce30a4" alt="blitznote_newnotes" width="500px">
+</div>
 
-### Dark Mode:
-![Dark Mode](https://via.placeholder.com/1000x400.png?text=Dark+Mode+Screenshot)
 
 ---
 
-## ⚙️ Technologies Used
+## ⚙️ Technologies Used 
 
 BlitzNotes leverages a modern tech stack to ensure performance, security, and maintainability:
 
@@ -117,7 +123,7 @@ To get started with BlitzNotes locally, follow these simple steps:
     npm start
     ```
 
-## 👥 Contact Me 
+## 👥 Contact Me <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Link.png" alt="Link" width="55" height="55" />
 
 Have questions? Feel free to reach out!
 
